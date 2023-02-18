@@ -17,24 +17,28 @@ const ellipseA = document.getElementById('ellipse-a');
 const ellipseB = document.getElementById('ellipse-b');
 const ellipseBtn = document.getElementById('ellipse-btn');
 const resultShow = document.getElementById('result-show');
+//  Counter use fo listing result of this 
 let counter = 1;
-
+// One function use for 3 types of value it return  
 function areaOne(num1, num2) {
   let a = parseInt(num1);
   let b = parseInt(num2);
   return 0.5 * a * b;
 };
+//  ellipse area calculate , it created for that cause it has Pi = 3.1416 
 function ellipse(num1, num2) {
   let a = parseInt(num1);
   let b = parseInt(num2);
   return 3.1416 * a * b;
 };
-
+//  other area calculate use these function
 function areaTwo(num1, num2) {
   let a = parseInt(num1);
   let b = parseInt(num2);
   return a * b;
 };
+
+// 01
 
 parallelogramBtn.addEventListener('click', function () {
   let a = parallelogramBvalue.value;
@@ -55,6 +59,7 @@ parallelogramBtn.addEventListener('click', function () {
     counter++;
   }
 });
+// 02 
 rectangularBtn.addEventListener('click', function () {
   let a = rectangularWvalue.value;
   let b = rectangularIvalue.value;
@@ -77,7 +82,7 @@ rectangularBtn.addEventListener('click', function () {
   }
 
 });
-
+// 03
 triangleBtn.addEventListener('click', function () {
   let a = triangleBvalue.value;
   let b = triangleHvalue.value;
@@ -96,11 +101,12 @@ triangleBtn.addEventListener('click', function () {
     counter++;
   }
 });
+// 04
 rhombusBtn.addEventListener('click', function () {
   let a = rhombusD1.value;
   let b = rhombusD2.value;
   if (a == '' || b == '') {
-    alert('Please Enter Your Triangle Value')
+    alert('Please Enter Your rhombus Value')
   } else if (a < 0 || b < 0) {
     alert('Please Enter Positive Value')
   } else {
@@ -114,11 +120,12 @@ rhombusBtn.addEventListener('click', function () {
     counter++;
   }
 });
+// 05
 pentagonBtn.addEventListener('click', function () {
   let a = pentagonB.value;
   let b = pentagonX.value;
   if (a == '' || b == '') {
-    alert('Please Enter Your Triangle Value')
+    alert('Please Enter Your pentagon Value')
   } else if (a < 0 || b < 0) {
     alert('Please Enter Positive Value')
   } else {
@@ -132,11 +139,12 @@ pentagonBtn.addEventListener('click', function () {
     counter++;
   }
 });
+// 06
 ellipseBtn.addEventListener('click', function () {
   let a = ellipseA.value;
   let b = ellipseB.value;
   if (a == '' || b == '') {
-    alert('Please Enter Your Triangle Value')
+    alert('Please Enter Your ellipse Value')
   } else if (a < 0 || b < 0) {
     alert('Please Enter Positive Value')
   } else {
@@ -151,13 +159,13 @@ ellipseBtn.addEventListener('click', function () {
   }
 });
 
+//  Here Using javascript bg color change randomly 
 
-
-const cards = document.querySelectorAll('.card-item'); // fix typo in query selector
-
+const cards = document.querySelectorAll('.card-item');
+//  i am using For Of loop to catch every tag that i use 
 for (const card of cards) {
 
-  // add event listener for mouseover
+
   card.addEventListener('mouseover', function () {
     const randomColor = getRandomColor();
     card.style.backgroundColor = randomColor;
@@ -168,7 +176,7 @@ for (const card of cards) {
   });
 }
 
-// helper function to generate random color
+
 function getRandomColor() {
   const letters = '0123456789ABCDEF';
   let color = '#';
