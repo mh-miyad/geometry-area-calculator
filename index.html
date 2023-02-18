@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./style.css" />
+    <title>Interactive Geometry Genius</title>
+  </head>
+  <body class="bg-gray-100">
+    <header class="bg-blue-100 py-2 container mx-auto px-10 my-3">
+      <div class="flex justify-between items-center">
+        <div class="logo">
+          <h1 class="text-gray-700 font-bold text-3xl">Interactive</h1>
+          <h2 class="text-gray-600 font-bold text-xl">Geometry Genius</h2>
+        </div>
+        <button
+          class="bg-blue-500 px-8 py-2 text-white rounded-md shadow-md shadow-black/40 hover:bg-blue-400 font-semibold"
+        >
+          Blog
+        </button>
+      </div>
+    </header>
+    <!-- Header Part End here  -->
+
+    <!--  Main part Start Here  -->
+    <main class="my-10">
+      <section class="container mx-auto">
+        <div class="flex gap-5 flex-col sm:flex-row">
+          <!-- div Item Create for card items start here  -->
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+            <div
+              class="card-1 card-item border border-black rounded-xl shadow-xl shadow-black/40 py-8 text-center"
+              style="width: 18rem"
+            >
+              <!-- here add bg random by javascript  -->
+              <div class="card-img">
+                <img src="./images/triangle.png" class="mx-auto w-3/4" alt="" />
+              </div>
+              <div class="card-body my-2">
+                <div class="card-tittle">Triangle</div>
+                <div class="card-formula my-3">Area (A) = 0.5×b×h</div>
+                <label for="triangle">
+                  <span class="bg-gray-200 py-2">b</span
+                  ><input id="tri-b-value" type="number" class="w-20 bg-gray-200 py-2" />cm
+                  <span class="bg-gray-200 py-2">h</span
+                  ><input
+                    type="number"
+                    class="w-20 py-2 bg-gray-200"
+                    name=""
+                    min="0"
+                    id="tri-h-value"
+                  />cm
+                </label>
+              </div>
+              <button id="triangle-btn"
+                class="bg-blue-600 px-14 my-3 py-3 rounded-md text-white font-semibold"
+              >
+                Calculate
+              </button>
+            </div>
+            <div
+              class="card-2 card-item border border-black rounded-xl shadow-xl shadow-black/40 py-8 text-center"
+              style="width: 18rem"
+            >
+              <!-- here add bg random by javascript  -->
+              <div class="card-img">
+                <img
+                  src="./images/parallelogram.png"
+                  class="mx-auto px-5"
+                  alt=""
+                />
+              </div>
+              <div class="card-body my-2">
+                <div class="card-tittle">parallelogram</div>
+                <div class="card-formula my-3">Area (A) =b×h</div>
+                <label for="parallelogram">
+                  <span class="bg-gray-200 py-2">b</span
+                  ><input type="number" id="par-b-value" class="w-20 bg-gray-200 py-2" />cm
+                  <span class="bg-gray-200 py-2">h</span
+                  ><input
+                    type="number"
+                    class="w-20 py-2 bg-gray-200"
+                    name=""
+                    id="par-h-value"
+                  />cm
+                </label>
+              </div>
+              <button id="par-btn"
+                class="bg-blue-600 px-14 my-3 py-3 rounded-md text-white font-semibold"
+              >
+                Calculate
+              </button>
+            </div>
+            <div
+              class="card-3 card-item border border-black rounded-xl shadow-xl shadow-black/40 py-8 text-center"
+              style="width: 18rem"
+            >
+              <!-- here add bg random by javascript  -->
+              <div class="card-img">
+                <img src="./images/rectangle.png" class="mx-auto px-5" alt="" />
+              </div>
+              <div class="card-body my-2">
+                <div class="card-tittle">Rectangle</div>
+                <div class="card-formula my-3">Area (A) = w×I</div>
+                <label for="rectangle">
+                  <span class="bg-gray-200 py-2">w</span
+                  ><input id="rec-w" type="number" class="w-20 bg-gray-200 py-2" />cm
+                  <span class="bg-gray-200 py-2">I</span
+                  ><input
+                    type="number"
+                    class="w-20 py-2 bg-gray-200"
+                    name=""
+                    id="rec-i"
+                  />cm
+                </label>
+              </div>
+              <button id="rec-btn"
+                class="bg-blue-600 px-14 my-3 py-3 rounded-md text-white font-semibold"
+              >
+                Calculate
+              </button>
+            </div>
+            <div
+              class="card-4 card-item border border-black rounded-xl shadow-xl shadow-black/40 py-8 text-center"
+              style="width: 18rem"
+            >
+              <!-- here add bg random by javascript  -->
+              <div class="card-img">
+                <img src="./images/rhombus.png" class="mx-auto" alt="" />
+              </div>
+              <div class="card-body my-2">
+                <div class="card-tittle">rhombus</div>
+                <div class="card-formula my-3">Area (A) = 0.5×d1×d2</div>
+                <label for="rhombus">
+                  <span class="bg-gray-200 py-2">d1</span
+                  ><input id="rh-d1" type="number" class="w-20 bg-gray-200 py-2" />cm
+                  <span class="bg-gray-200 py-2">d2</span
+                  ><input
+                    type="number"
+                    class="w-20 py-2 bg-gray-200"
+                    name=""
+                    id="rh-d2"
+                  />cm
+                </label>
+              </div>
+              <button id="rh-btn"
+                class="bg-blue-600 px-14 my-3 py-3 rounded-md text-white font-semibold"
+              >
+                Calculate
+              </button>
+            </div>
+            <div
+              class="card-5 card-item border border-black rounded-xl shadow-xl shadow-black/40 py-8 text-center"
+              style="width: 18rem"
+            >
+              <!-- here add bg random by javascript  -->
+              <div class="card-img">
+                <img src="./images/pentagon.png" class="mx-auto" alt="" />
+              </div>
+              <div class="card-body my-2">
+                <div class="card-tittle">pentagon</div>
+                <div class="card-formula my-3">Area (A) = 0.5×p×b</div>
+                <label for="pentagon">
+                  <span class="bg-gray-200 py-2">p</span
+                  ><input id="pen-x" type="number" class="w-20 bg-gray-200 py-2" />cm
+                  <span class="bg-gray-200 py-2">b</span
+                  ><input
+                    type="number"
+                    class="w-20 py-2 bg-gray-200"
+                    name=""
+                    id="pen-b"
+                  />cm
+                </label>
+              </div>
+              <button id="pen-btn"
+                class="bg-blue-600 px-14 my-3 py-3 rounded-md text-white font-semibold"
+              >
+                Calculate
+              </button>
+            </div>
+            <div
+              class="card-6 card-item border border-black rounded-xl shadow-xl shadow-black/40 py-8 text-center"
+              style="width: 18rem"
+            >
+              <!-- here add bg random by javascript  -->
+              <div class="card-img">
+                <img src="./images/ellipse.png" class="mx-auto px-5" alt="" />
+              </div>
+              <div class="card-body my-2">
+                <div class="card-tittle">ellipse</div>
+                <div class="card-formula my-3">Area (A) =πab</div>
+                <label for="ellipse">
+                  <span class="bg-gray-200 py-2">a</span
+                  ><input id="ellipse-a" type="number" class="w-20 bg-gray-200 py-2" />cm
+                  <span class="bg-gray-200 py-2">b</span
+                  ><input
+                    type="number"
+                    class="w-20 py-2 bg-gray-200"
+                    name=""
+                    id="ellipse-b"
+                  />cm
+                </label>
+              </div>
+              <button id="ellipse-btn"
+                class="bg-blue-600 px-14 my-3 py-3 rounded-md text-white font-semibold"
+              >
+                Calculate
+              </button>
+            </div>
+          </div>
+
+          <!-- div Item Create for card items End here  -->
+          <!-- div create for showing result  -->
+
+          <div class="my-5">
+            <table class="table-fixed" id="my-table">
+              <thead>
+                <h2 class="text-center">Area Calculator</h2>
+              </thead>
+              <tbody class="bg-white " id="result-show">
+              </tbody>
+            </table>
+          </div>
+
+          <!-- div create for showing result  -->
+        </div>
+      </section>
+    </main>
+    <!--  Main part End Here  -->
+
+    <!--  Javascript Add here  -->
+    <script src="./main.js"></script>
+  </body>
+</html>
